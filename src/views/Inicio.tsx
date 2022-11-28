@@ -1,4 +1,3 @@
-import {NavLink} from 'react-router-dom'
 import Button from "../components/Button"
 import Divider from '../components/Divider'
 import CardProjects from '../components/CardProjects';
@@ -10,7 +9,7 @@ export default function Inicio() {
     document.title = 'Início'
     return (
             <main className='h-full w-full flex items-center justify-center flex-col'>
-                <section className='h-108 flex items-center justify-center flex-col w-full h-full bg-galaxy bg-no-repeat bg-size-25 pl-8 pr-8'>
+                <section className='h-108 flex items-center justify-center flex-col w-full bg-galaxy bg-no-repeat bg-size-25 pl-8 pr-8'>
                     <h1 className='text-3xl text-white font-bold'>Matheus Santos</h1>
                     <h2 className='text-2xl text-white font-semibold'>Dev. FullStack</h2>
                 </section>
