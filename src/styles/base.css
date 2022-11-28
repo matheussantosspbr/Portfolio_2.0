@@ -1,0 +1,28 @@
+/* ===== Variaveis ===== */
+
+:root {
+    /*Cores*/
+    --cor-primaria: #00b8eb;
+    --cor-segundaria: #2f3944;
+    --pleacehouder: #ffffff91;
+    --footer: #080b0e;
+    --body: #0b0f13;
+    --letras: #fff;
+  }
+  
+  /* ===== Layout ===== */
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--cor-primaria);
+    border-radius: 30px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--body);
+    border-radius: 30px;
+  }
