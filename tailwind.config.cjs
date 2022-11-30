@@ -52,11 +52,19 @@ module.exports = {
         'md': {'max': '550px'},
         // => @media (max-width: 767px) { ... }
   
-        'sm': {'max': '639px'},
+        'sm': {'max': '450px'},
         // => @media (max-width: 639px) { ... }
-      }
+      },
+      textShadow: {
+        'default': '0 2px 0 #000',
+        'md': '0 2px 2px #000',
+        'h2': '5px 5px 5px #000',
+        'h1': '0 0 3px rgba(0, 0, 0, .8), 0 0 5px rgba(0, 0, 0, .9)',
+     }
       
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow')
+  ],
 }

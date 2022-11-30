@@ -19,10 +19,7 @@ export default function Inicio() {
                     <div className='h-auto w-full p-6  text-gray-900 bg-cyan-500 flex flex-col items-center justify-center shadow-lg-inner shadow-gray-900 pl-8 pr-8'>
                         <div className='flex flex-wrap items-center justify-center'>
                             <CardProjects url='/public/projetos/RegraDe3.png' alt="Regra de 3" title='teste'/>
-                            <CardProjects url='/public/projetos/RegraDe3.png' alt="Regra de 3" title='teste'/>
-                            <CardProjects url='/public/projetos/RegraDe3.png' alt="Regra de 3" title='teste'/>
-                            <CardProjects url='/public/projetos/RegraDe3.png' alt="Regra de 3" title='teste'/>
-                            <CardProjects url='/public/projetos/RegraDe3.png' alt="Regra de 3" title='teste'/>
+                            <CardProjects url='/public/projetos/SistemaDeLogin.png' alt="Sistema de Login" title='Sistema de Login'/>
                         </div>
                         <Button title='Ver Mais' type='SECONDARY' width='w-32' url='/portfolio' add='text-base'/>
                     </div>

@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Inicio from '../views/Inicio';
 import Sobre from '../views/Sobre';
 import Portfolio from '../views/Portfolio';
+import Certificado from '../views/Certificados';
 
 export default function Template() {
     return (
@@ -15,6 +16,7 @@ export default function Template() {
                     <Route path='/' element={<Inicio/>}/>
                     <Route path='/sobre' element={<Sobre/>}/>
                     <Route path='/portfolio' element={<Portfolio/>}/>
+                    <Route path='/certificados' element={<Certificado/>}/>
                 </Routes>
                 <Footer/>
              </BrowserRouter>
