@@ -1,6 +1,7 @@
 import Certificados from "../components/Certificado"
 
 export default function Certificado() {
+    document.title = 'Certificados'
     return (
         <main className='h-alto w-full flex items-center justify-center flex-col'>
             <section className='h-alto  flex items-center justify-center flex-col w-full pb-10'>
@@ -16,9 +17,6 @@ export default function Certificado() {
                     <Certificados title="Projeto PicPro" horas="30 Horas" url="7"/>
                 </div>
             </section>
-            
         </main>
-
-      
     )
   }

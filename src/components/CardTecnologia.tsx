@@ -30,7 +30,7 @@ export default function CardTecnologia({linguagem, arquivo,colorStroke,alt, colo
               </svg>
             </div>
             <figure className="relative w-16 -top-[5.2rem] left-[5.2rem]">
-                <img src={`/public/linguagens/${arquivo}.svg`} alt={alt} />
+                <img src={`/linguagens/${arquivo}.svg`} alt={alt} />
             </figure>
             </div>
             <p className="text-white w-full text-center font-medium">{linguagem}</p>

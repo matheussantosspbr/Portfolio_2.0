@@ -15,7 +15,10 @@ module.exports = {
           'css' : '#33A9DC',
           'js': '#F7DF1E',
           'php': '#6e81b6',
-          'postgreSQl': '#336791'
+          'postgreSQl': '#336791',
+          'react': '#00d8ff',
+          'laravel' : '#FF2D20',
+          'tailwindcss' : '#07B6D5'
         },
         ferramentas:{
           'photoshop': '#00C8FF',
@@ -27,11 +30,12 @@ module.exports = {
       boxShadow: {
         'lg-top': '  0 -10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
         'center': '  0 0px 10px 7px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-        'lg-inner': ' inset 0 10px 30px 0 rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.1);',
+        'center-md': '  0 0px 10px 1px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+        'lg-inner': ' inset 0 20px 30px 0 rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.1);',
         'left': '  -5px 0 30px 20px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
       },
       backgroundImage:{
-        galaxy: "url('./fundo_cabecalho.png')",
+        galaxy: "url('/fundo_cabecalho.png')",
       },
       backgroundSize: {
         'size-25': '25rem',
@@ -54,6 +58,8 @@ module.exports = {
   
         'sm': {'max': '450px'},
         // => @media (max-width: 639px) { ... }
+        'xs': {'max': '350px'},
+
       },
       textShadow: {
         'default': '0 2px 0 #000',
@@ -65,6 +71,5 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss-textshadow')
-  ],
+    require('tailwindcss-textshadow')],
 }

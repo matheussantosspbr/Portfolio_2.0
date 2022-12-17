@@ -30,7 +30,6 @@ export default function Button({ title, type = 'PRIMARY',width, add, url = ""}: 
             border-2
             transition-colors
             duration-[0.2s]
-            transi
             ${borderColor}
             text-white
             text-base
