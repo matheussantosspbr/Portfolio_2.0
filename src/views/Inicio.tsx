@@ -2,8 +2,7 @@ import Button from "../components/Button"
 import Divider from '../components/Divider'
 import CardProjects from '../components/CardProjects';
 import CardTecnologia from '../components/CardTecnologia';
-import InputText from '../components/InputText';
-import TextArea from '../components/TextArea';
+import FormContato from "../components/Form";
 
 export default function Inicio() {
     document.title = 'Início'
@@ -68,15 +67,7 @@ export default function Inicio() {
                 <Divider type='PRIMARY'/>
                 <section className='mt-8 w-full flex items-center flex-col justify-center pl-8 pr-8'>
                     <h2 className='text-2xl text-white font-semibold mb-8'>Me Mande Uma Mensagem 😉</h2>
-
-                    <form action="https://api.staticforms.xyz/submit" method="post" className='flex flex-col items-start justify-center' >
-                        <input type="hidden" name="accessKey" value="7f43e03a-61ff-4a20-a647-ef65ef5fff00" required />
-                        <input type="hidden" name="redirectTo" value="https://matheussantos.tech/" />
-                        <InputText placeholder='Digite seu nome' width='w-[30rem]' nome='name' type='text' add='md:w-[calc(90vw)]'/>
-                        <InputText placeholder='Digite seu email' width='w-[30rem]' nome='email' type='email'add='md:w-[calc(90vw)]'/>
-                        <TextArea nome='message' placeholder='Digite sua mensagem aqui...' width='w-[30rem]' rows={15} add='md:w-[calc(90vw)]' />
-                        <button type="submit" value="Submit" className='h-10 rounded-3xl border-2 text-white text-base pl-4 pr-4 bg-gray-900 border-cyan-500 hover:bg-cyan-500 transition-colors duration-[0.2s]'>Enviar mensagem</button>
-                    </form>
+                    <FormContato/>
                 </section>
             </main>
     )
