@@ -21,12 +21,12 @@ export default function FormContato() {
         }
         emailJs.send(service, template, templalteParams, publicToken)
         .then((res)=>{
-            location.href = '/'
+            location.reload()
             setName('')
             setEmail('')
             setMessage('')
         },(err)=>{
-            
+            location.reload()
         })
     }
 
