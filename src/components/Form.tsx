@@ -1,10 +1,15 @@
 import { useState } from "react"
 import emailJs from '@emailjs/browser'
 
+
 export default function FormContato() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    
+    const publicToken = ( import.meta.env.VITE_PUBLIC_TOKEN_EMAILJS|| '').toString()
+    const template = (import.meta.env.VITE_TEMPLATE_EMAILJS || '').toString()
+    const service = (import.meta.env.VITE_SERVICE_EMAILJS || '').toString()
 
     function sendEmail(e: { preventDefault: () => void }){
         e.preventDefault()
@@ -14,14 +19,13 @@ export default function FormContato() {
             message: message,
             email:email
         }
-        emailJs.send("service_fhd7xbj", "template_11sbboz", templalteParams, "nzCvs-se9dZ40yll3")
+        emailJs.send(service, template, templalteParams, publicToken)
         .then((res)=>{
-            console.log("Email enviado", res.status, res.text);
+            location.href = '/'
             setName('')
             setEmail('')
             setMessage('')
         },(err)=>{
-            console.log("ERROR");
             
         })
     }

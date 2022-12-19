@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 versoes
-*.env
+
 
 # Editor directories and files
 .vscode/*
@@ -24,4 +24,7 @@ versoes
 *.njsproj
 *.sln
 *.sw?
+
+#misc
+.env
 

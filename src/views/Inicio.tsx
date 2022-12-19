@@ -44,7 +44,7 @@ export default function Inicio() {
                 <section className='flex mt-8 items-center justify-center mb-8 flex-col pl-8 pr-8 xs:pl-0 xs:pr-0'>
                     <h2 className='text-2xl text-white font-semibold mb-8'>Tecnologias</h2>
                     <div className='flex flex-wrap items-center justify-center'>
-                    <CardTecnologia linguagem='HTML' arquivo='html' colorShadow='shadow-linguagens-html' colorStroke='stroke-linguagens-html' alt='Icone HTML'/>
+                        <CardTecnologia linguagem='HTML' arquivo='html' colorShadow='shadow-linguagens-html' colorStroke='stroke-linguagens-html' alt='Icone HTML'/>
                         <CardTecnologia linguagem='CSS'  arquivo='css'  colorShadow='shadow-linguagens-css' colorStroke='stroke-linguagens-css' alt='Icone CSS'/>
                         <CardTecnologia linguagem='JavaScript' arquivo='js' colorShadow='shadow-linguagens-js' colorStroke='stroke-linguagens-js' alt='Icone JavaScript'/>
                         <CardTecnologia linguagem='React' arquivo='react' colorShadow='shadow-linguagens-react' colorStroke='stroke-linguagens-react' alt='Icone React'/>
