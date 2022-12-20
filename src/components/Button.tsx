@@ -16,7 +16,7 @@ export default function Button({ title, type = 'PRIMARY',width, add, url = ""}: 
 
     return (
         
-        <NavLink to={url} className={`
+        <NavLink to={url} aria-label={title} className={`
             ${width}
             rounded-3xl
             h-10

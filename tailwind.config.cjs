@@ -35,7 +35,7 @@ module.exports = {
         'left': '  -5px 0 30px 20px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
       },
       backgroundImage:{
-        galaxy: "url('/fundo_cabecalho.png')",
+        galaxy: "url('/fundo_cabecalho.avif')",
       },
       backgroundSize: {
         'size-25': '25rem',

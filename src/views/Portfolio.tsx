@@ -8,8 +8,8 @@ export default function Portfolio() {
                 <h1 className='text-3xl text-white font-bold pb-14 pt-10'>Portfólio</h1>
                 <div className='h-auto w-full p-6  text-gray-900 bg-cyan-500 flex flex-col items-center justify-center shadow-lg-inner shadow-gray-900 pl-8 pr-8'>
                         <div className='flex flex-wrap items-center justify-center w-full pt-10'>
-                            <CardProjects url='/projetos/RegraDe3.png' alt="Regra de 3" title='Regra de 3'/>
-                            <CardProjects url='/projetos/SistemaDeLogin.png' alt="Sistema de Login" title='Sistema de Login'/>
+                            <CardProjects url='/projetos/RegraDe3.avif' alt="Regra de 3" title='Regra de 3'/>
+                            <CardProjects url='/projetos/SistemaDeLogin.avif' alt="Sistema de Login" title='Sistema de Login'/>
                         </div>
                     </div>
             </section>

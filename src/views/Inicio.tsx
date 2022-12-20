@@ -17,8 +17,8 @@ export default function Inicio() {
                     <h2 className='text-2xl text-white font-semibold mb-8'>Portfólio</h2>
                     <div className='h-auto w-full p-6  text-gray-900 bg-cyan-500 flex flex-col items-center justify-center shadow-lg-inner shadow-gray-900 pl-8 pr-8'>
                         <div className='flex flex-wrap items-center justify-center'>
-                            <CardProjects url='/projetos/RegraDe3.png' alt="Regra de 3" title='Regra de 3'/>
-                            <CardProjects url='/projetos/SistemaDeLogin.png' alt="Sistema de Login" title='Sistema de Login'/>
+                            <CardProjects url='/projetos/RegraDe3.avif' alt="Regra de 3" title='Regra de 3'/>
+                            <CardProjects url='/projetos/SistemaDeLogin.avif' alt="Sistema de Login" title='Sistema de Login'/>
                         </div>
                         <Button title='Ver Mais' type='SECONDARY' width='w-32' url='/portfolio' add='text-base'/>
                     </div>
@@ -26,7 +26,7 @@ export default function Inicio() {
                 <Divider type='SECONDARY'/>
                 <section className='flex mt-8 items-center justify-center mb-8 pl-8 pr-8 lg:flex-col lg:text-justify'>
                     <figure>
-                        <img src="/fotoMinha.png" alt="foto_Minha"  className='w-52 rounded-full border-4 border-cyan-500'/>
+                        <img src="/fotoMinha.avif" alt="foto_Minha"  className='w-52 rounded-full border-4 border-cyan-500'/>
                     </figure>
                     <div className=' ml-4 lg:flex lg:flex-col lg:items-center lg:justify-center lg:ml-0'>
                         <h2 className='text-2xl text-white font-semibold mb-4 lg:text-center lg:mt-4'>Matheus Santos</h2>

@@ -13,7 +13,7 @@ export default function Sobre() {
             <Divider type='PRIMARY'/>
             <section className='flex mt-8 items-center justify-center mb-8 pl-8 pr-8 lg:flex-col lg:text-justify'>
                     <figure>
-                        <img src="/fotoMinha.png" alt="foto_Minha"  className='w-52 rounded-full border-4 border-cyan-500'/>
+                        <img src="/fotoMinha.avif" alt="foto_Minha"  className='w-52 rounded-full border-4 border-cyan-500'/>
                     </figure>
                     <div className=' ml-4 lg:flex lg:flex-col lg:items-center lg:justify-center lg:ml-0'>
                         <h2 className='text-2xl text-white font-semibold mb-4 lg:text-center lg:mt-4'>Matheus Santos</h2>
