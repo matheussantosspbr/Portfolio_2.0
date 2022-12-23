@@ -5,7 +5,7 @@ interface Props{
     linguagens: string;
   }
 
-export default function CardProjects({url, alt,title,linguagens }: Props ){
+export default function CardProjectsLayout2({url, alt,title,linguagens }: Props ){
 
     let imgs = linguagens.split(",");
 
@@ -17,9 +17,9 @@ export default function CardProjects({url, alt,title,linguagens }: Props ){
 
 
     return(
-        <div className='h-108 w-72 p-3 pt-9  flex items-center justify-start flex-col ml-5 mr-5 mb-8 cardProjects'>
-            <figure className="mb-2">
-                <img src={url} alt={alt} className='w-48 rounded-md'/>
+        <div className='w-full p-16 flex items-center justify-start flex-col ml-5 mr-5 mb-8 cardProjects xmd:p-4 '>
+            <figure className="mb-4 md:mb-2">
+                <img src={url} alt={alt} className='w-full rounded-md'/>
             </figure>
             <div className="mb-4">
                 <p className="text-xl mt-2 text-white ">{title}</p>

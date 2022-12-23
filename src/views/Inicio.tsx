@@ -15,10 +15,10 @@ export default function Inicio() {
                 <Divider type='PRIMARY'/>
                 <section className='mt-8 w-full flex items-center flex-col justify-center'>
                     <h2 className='text-2xl text-white font-semibold mb-8'>Portfólio</h2>
-                    <div className='h-auto w-full p-6  text-gray-900 bg-cyan-500 flex flex-col items-center justify-center shadow-lg-inner shadow-gray-900 pl-8 pr-8'>
+                    <div className='h-auto w-full p-6 pt-16  text-gray-900 bg-cyan-500 flex flex-col items-center justify-center shadow-lg-inner shadow-gray-900 pl-8 pr-8'>
                         <div className='flex flex-wrap items-center justify-center'>
-                            <CardProjects url='/projetos/RegraDe3.avif' alt="Regra de 3" title='Regra de 3'/>
-                            <CardProjects url='/projetos/SistemaDeLogin.avif' alt="Sistema de Login" title='Sistema de Login'/>
+                            <CardProjects linguagens="html,css,js" url='/projetos/RegraDe3.avif' alt="Regra de 3" title='Regra de 3'/>
+                            <CardProjects linguagens="html,css,js,php" url='/projetos/SistemaDeLogin.avif' alt="Sistema de Login" title='Sistema de Login'/>
                         </div>
                         <Button title='Ver Mais' type='SECONDARY' width='w-32' url='/portfolio' add='text-base'/>
                     </div>

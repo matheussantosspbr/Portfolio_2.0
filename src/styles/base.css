@@ -106,3 +106,14 @@
   .s16 {
     fill: #4d4d4d
   }
+
+.cardProjects{
+      /* From https://css.glass */
+      background: rgba(0, 0, 0, 0.50);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+

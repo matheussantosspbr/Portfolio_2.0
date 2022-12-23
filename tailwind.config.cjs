@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors:{
         gray:{
-          '900' : '#0B0F13'
+          '900' : '#0B0F13',
+          '900-0.70': 'rgba(0, 0, 0, 0.50)'
         },
         cyan:{
           '500': '#00B8EB '
@@ -52,6 +53,8 @@ module.exports = {
   
         'lg': {'max': '950px'},
         // => @media (max-width: 1023px) { ... }
+
+        'xmd': {'max': '768px'},
   
         'md': {'max': '550px'},
         // => @media (max-width: 767px) { ... }
