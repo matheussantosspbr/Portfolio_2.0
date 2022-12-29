@@ -1,0 +1,132 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios'
+import {NumericFormat} from 'react-number-format'
+
+
+export default function ConversaoDeMoeda() {
+
+  document.title = 'Conversão de Moeda'
+
+  const [response, setResponse] = useState(null);
+  const [moeda1, setMoeda1] = useState('Real');
+  const [moeda2, setMoeda2] = useState('Dolar');
+  const [valor, setValor] = useState('0');
+  const [result, setResult] = useState('0');
+  
+  //Consulta na API
+  const fetchQuotes = async () => {
+    try {
+      const res = await axios.get("https://economia.awesomeapi.com.br/last/USD-BRL,BRL-USD,EUR-BRL,BRL-EUR,USD-EUR,EUR-USD",{
+        headers: {},
+        params: {}
+      })
+
+      setResponse(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(()=>{
+    fetchQuotes()
+    calcular()
+  },[valor,result])
+
+  // Pegando os valores
+  let dolarParaReal = response?.['USDBRL']['high'] || 5
+  let realParaDolar = response?.['BRLUSD']['high'] || 5
+  let euroParaReal = response?.['EURBRL']['high']  || 5
+  let realParaEuro = response?.['BRLEUR']['high']  || 5
+  let euroParaDolar = response?.['EURUSD']['high']  || 5
+  let dolarParaEuro = response?.['USDEUR']['high']  || 5
+
+  const calcular = ()=>{
+
+    let valorReal = moeda1 == 'Real' ? valor.replace('R$ ', '') : moeda1 == 'Dolar' ? valor.replace('$ ', '') : valor.replace(' €', '')
+    // let valorReal = moeda1 == 'Real' || moeda1 == 'Euro' ? valor1.replace(',', '.') : valor1.replace('.', ',')
+    
+    if(moeda1 == 'Real' && moeda2 == 'Dolar'){
+      setResult(((parseFloat(valorReal) * realParaDolar).toLocaleString('en', { style: 'currency', currency: 'USD' })).toString())
+    }else if(moeda1 == 'Dolar' && moeda2 == 'Real'){
+      setResult(((parseFloat(valorReal) * dolarParaReal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })).toString())
+    }else if(moeda1 == 'Real' && moeda2 == 'Euro'){
+      setResult(((parseFloat(valorReal) * realParaEuro).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })).toString())
+    }else if(moeda1 == 'Euro' && moeda2 == 'Real'){
+      setResult(((parseFloat(valorReal) * euroParaReal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })).toString())
+    }else if(moeda1 == 'Euro' && moeda2 == 'Dolar'){
+      setResult(((parseFloat(valorReal) * euroParaDolar).toLocaleString('en', { style: 'currency', currency: 'USD' })).toString())
+    }else if(moeda1 == 'Dolar' && moeda2 == 'Euro'){
+      setResult(((parseFloat(valorReal) * dolarParaEuro).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })).toString())
+    }else if(moeda1 == 'Dolar' && moeda2 == 'Dolar'){
+      setResult(parseFloat(valorReal).toLocaleString('en', { style: 'currency', currency: 'USD' }).toString())
+    }else if(moeda1 == 'Real' && moeda2 == 'Real'){
+      setResult(parseFloat(valorReal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).toString())
+    }else if(moeda1 == 'Euro' && moeda2 == 'Euro'){
+      setResult(parseFloat(valorReal).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }).toString())
+    }
+  }
+
+  return (
+    <div className='flex p-4 items-center justify-evenly flex-row h-[80vh] xl:flex-col xl:justify-center'>
+      <div className='w-auto flex items-center justify-start'>
+        <select className='w-24 h-10 text-white bg-gray-900 border border-cyan-500 rounded-l outline-none pl-2' value={moeda1} onChange={e => setMoeda1(e.target.value)}>
+          <option value="Real"selected>Real</option>
+          <option value="Dolar">Dolar</option>
+          <option value="Euro">Euro</option>
+        </select>
+
+        <NumericFormat
+            prefix={ moeda1 == 'Real' ? 'R$ ' : moeda1 == 'Dolar' ? '$' : ''}
+            suffix={moeda1 == 'Euro' ? ' €' : ''} 
+            decimalScale={2}
+            
+            
+            className='w-96 md:w-[70vw] h-10 p-2 pt-0 pb-0 flex items-center justify-start bg-gray-900 text-white border border-l-0 border-cyan-500 rounded-r outline-none'
+            value={valor}
+            onChange={e => {
+
+              
+              // let string = e.target.value?.toString()
+              // let parte1 =( string.substr(0,(string.length -2)) || 0) == 0 ? 0 : string.substr(0,(string.length -2))  
+              // var resultado = moeda1 == 'Dolar' ? parte1 +"."+string.substr(-2,string.length ) : parte1 +","+string.substr(-2,string.length )
+              // setValor(resultado);
+              setValor(e.target.value);
+            }}
+            
+            placeholder={
+            moeda1 === 'Real' ?
+            'R$ 0,00'
+            : moeda1 === 'Dolar' ?
+            '$0.00'
+            : moeda1 == 'Euro' ?
+            '0,00 €'
+            : moeda1
+            }
+        />
+
+        
+      </div>
+      <i className="fa-solid fa-arrow-right text-4xl text-white xl:rotate-90 xl:m-10 md:text-3xl"></i>
+      <div className='w-auto flex items-center justify-start '>
+
+        <select className='w-24 h-10 text-white bg-gray-900 border border-cyan-500 rounded-l outline-none pl-2' value={moeda2} onChange={e => setMoeda2(e.target.value)}>
+          <option value="Real">Real</option>
+          <option value="Dolar" selected>Dolar</option>
+          <option value="Euro">Euro</option>
+        </select>
+        
+        <input value={
+          result === '$NaN' ?
+          '$0.00'
+          : result === 'R$ NaN' ?
+            'R$ 0,00'
+          : result === 'NaN €' ?
+            '0,00 €'
+          : result
+      }
+      className='w-96 md:w-[70vw] h-10 p-2 pt-0 pb-0 flex items-center justify-start bg-gray-900 text-white border border-l-0 border-cyan-500 rounded-r'
+      disabled/>
+      </div>
+    </div>
+  )
+}

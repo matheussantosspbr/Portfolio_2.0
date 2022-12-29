@@ -1,12 +1,19 @@
 import {BrowserRouter, Routes, Route, } from 'react-router-dom'
+
+// Template
 import Header from "./Header";
 import Footer from "./Footer";
+import ButtonTop from './ButtonTop';
+
+// Paginas Principais
 import Inicio from '../views/Inicio';
 import Sobre from '../views/Sobre';
 import Portfolio from '../views/Portfolio';
 import Certificado from '../views/Certificados';
 import NotFound from '../views/NotFound';
-import ButtonTop from './ButtonTop';
+
+// Projetos
+import ConversaoDeMoeda from '../views/projects/ConversaoDeMoeda';
 
 export default function Template() {
     return (
@@ -18,6 +25,7 @@ export default function Template() {
                     <Route path='/' element={<Inicio/>}/>
                     <Route path='/sobre' element={<Sobre/>}/>
                     <Route path='/portfolio' element={<Portfolio/>}/>
+                    <Route path='/portfolio/conversao_de_moeda' element={<ConversaoDeMoeda/>}/>
                     <Route path='/certificados' element={<Certificado/>}/>
                     <Route path='*' element={<NotFound />} />
                 </Routes>
