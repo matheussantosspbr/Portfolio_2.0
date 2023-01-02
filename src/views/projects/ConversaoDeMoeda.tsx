@@ -81,7 +81,7 @@ export default function ConversaoDeMoeda() {
             decimalScale={2}
             
             
-            className='w-96 md:w-[70vw] h-10 p-2 pt-0 pb-0 flex items-center justify-start bg-gray-900 text-white border border-l-0 border-cyan-500 rounded-r outline-none'
+            className='w-96 md:w-[70vw] sm:w-[60vw] xs:w-[55vw] h-10 p-2 pt-0 pb-0 flex items-center justify-start bg-gray-900 text-white border border-l-0 border-cyan-500 rounded-r outline-none'
             value={valor}
             onChange={e => {
 
@@ -124,7 +124,7 @@ export default function ConversaoDeMoeda() {
             '0,00 €'
           : result
       }
-      className='w-96 md:w-[70vw] h-10 p-2 pt-0 pb-0 flex items-center justify-start bg-gray-900 text-white border border-l-0 border-cyan-500 rounded-r'
+      className='w-96 md:w-[70vw] sm:w-[60vw] xs:w-[55vw] h-10 p-2 pt-0 pb-0 flex items-center justify-start bg-gray-900 text-white border border-l-0 border-cyan-500 rounded-r'
       disabled/>
       </div>
     </div>
