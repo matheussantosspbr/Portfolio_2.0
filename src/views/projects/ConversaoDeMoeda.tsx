@@ -42,7 +42,7 @@ export default function ConversaoDeMoeda() {
 
   const calcular = ()=>{
 
-    let valorReal = moeda1 == 'Real' ? valor.replace('R$ ', '') : moeda1 == 'Dolar' ? valor.replace('$ ', '') : valor.replace(' €', '')
+    let valorReal = moeda1 == 'Real' ? valor.replace('R$ ', '') : moeda1 == 'Dolar' ? valor.replace('$', '') : valor.replace(' €', '')
     // let valorReal = moeda1 == 'Real' || moeda1 == 'Euro' ? valor1.replace(',', '.') : valor1.replace('.', ',')
     
     if(moeda1 == 'Real' && moeda2 == 'Dolar'){

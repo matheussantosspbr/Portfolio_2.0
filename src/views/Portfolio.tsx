@@ -12,6 +12,7 @@ export default function Portfolio() {
                             <CardProjectsLayout2  linguagens="react,tailwindcss" url='/projetos/site.avif' alt="Portfólio" title='Portfólio'/>
                             <CardProjects linguagens="html,css,js" url='/projetos/RegraDe3.avif' alt="Regra de 3" title='Regra de 3'/>
                             <CardProjects linguagens="html,css,js,php" url='/projetos/SistemaDeLogin.avif' alt="Sistema de Login" title='Sistema de Login'/>
+                            <CardProjects linguagens="react,tailwindcss" url='/projetos/conversorDeMoeda.avif' alt="Conversor de Moedas" title='Conversor de Moedas'/>
                         </div>
                     </div>
             </section>
