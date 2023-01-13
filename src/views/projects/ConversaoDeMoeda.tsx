@@ -16,7 +16,7 @@ export default function ConversorDeMoeda() {
   //Consulta na API
   const fetchQuotes = async () => {
     try {
-      const res = await axios.get("https://economia.awesomeapi.com.br/last/USD-BRL,BRL-USD,EUR-BRL,BRL-EUR,USD-EUR,EUR-USD",{
+      const res = await axios.get("https://api-precohoje.matheussantos.tech",{
         headers: {},
         params: {}
       })
@@ -33,12 +33,12 @@ export default function ConversorDeMoeda() {
   },[valor,result])
 
   // Pegando os valores
-  let dolarParaReal = response?.['USDBRL']['high'] || 5
-  let realParaDolar = response?.['BRLUSD']['high'] || 5
-  let euroParaReal = response?.['EURBRL']['high']  || 5
-  let realParaEuro = response?.['BRLEUR']['high']  || 5
-  let euroParaDolar = response?.['EURUSD']['high']  || 5
-  let dolarParaEuro = response?.['USDEUR']['high']  || 5
+  let dolarParaReal = response?.['USD_BRL'] || 5
+  let realParaDolar = response?.['BRL_USD'] || 5
+  let euroParaReal = response?.['EUR_BRL']  || 5
+  let realParaEuro = response?.['BRL_EUR']  || 5
+  let euroParaDolar = response?.['EUR_USD'] || 5
+  let dolarParaEuro = response?.['USD_EUR'] || 5
 
   const calcular = ()=>{
 
