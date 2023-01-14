@@ -10,8 +10,8 @@ export default function ConversorDeMoeda() {
   const [response, setResponse] = useState(null);
   const [moeda1, setMoeda1] = useState('Real');
   const [moeda2, setMoeda2] = useState('Dolar');
-  const [valor, setValor] = useState('0');
-  const [result, setResult] = useState('0');
+  const [valor, setValor] = useState('');
+  const [result, setResult] = useState('');
   
   //Consulta na API
   const fetchQuotes = async () => {
