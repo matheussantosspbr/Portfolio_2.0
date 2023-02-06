@@ -42,29 +42,29 @@ export default function Inicio() {
                 </section>
                 <Divider type='PRIMARY'/>
                 <section className='flex mt-8 !w-full items-center justify-center mb-8 flex-col pl-8 pr-8 xs:pl-0 xs:pr-0'>
-                    <h2 className='text-2xl text-white font-semibold mb-8'>Tecnologias</h2>
-                    <div className='w-full flex flex-wrap items-center justify-center'>
-                        <CardTecnologia linguagem='HTML' arquivo='html' colorShadow='shadow-linguagens-html' colorStroke='stroke-linguagens-html' alt='Icone HTML'/>
-                        {/* <CardTecnologia linguagem='CSS'  arquivo='css'  colorShadow='shadow-linguagens-css' colorStroke='stroke-linguagens-css' alt='Icone CSS'/>
-                        <CardTecnologia linguagem='JavaScript' arquivo='js' colorShadow='shadow-linguagens-js' colorStroke='stroke-linguagens-js' alt='Icone JavaScript'/>
-                        <CardTecnologia linguagem='React' arquivo='react' colorShadow='shadow-linguagens-react' colorStroke='stroke-linguagens-react' alt='Icone React'/>
-                        <CardTecnologia linguagem='TailWindCSS' arquivo='tailwindcss' colorShadow='shadow-linguagens-tailwindcss' colorStroke='stroke-linguagens-tailwindcss' alt='Icone TailWindCSS'/>
-                        <CardTecnologia linguagem='PHP' arquivo='php' colorShadow='shadow-linguagens-php' colorStroke='stroke-linguagens-php' alt='Icone PHP'/>
-                        <CardTecnologia linguagem='Laravel' arquivo='laravel' colorShadow='shadow-linguagens-laravel' colorStroke='stroke-linguagens-laravel' alt='Icone Laravel'/>
-                        <CardTecnologia linguagem='PostgreSQL' arquivo='postgreSql' colorShadow='shadow-linguagens-postgreSQl' colorStroke='stroke-linguagens-postgreSQl' alt='Icone PostgreSQL'/>   */}
+                    <h2 className='text-2xl text-white font-semibold mb-8 h-10'>Tecnologias</h2>
+                    <div className='!w-full flex flex-wrap items-center justify-center'>
+                        <CardTecnologia linguagem='HTML' arquivo='html' color='front-HTML' colorStroke='stroke-linguagens-html' alt='Icone HTML'/>
+                        <CardTecnologia linguagem='CSS'  arquivo='css'  color='front-CSS' colorStroke='stroke-linguagens-css' alt='Icone CSS'/>
+                        <CardTecnologia linguagem='JavaScript' arquivo='js' color='front-JavaScript' colorStroke='stroke-linguagens-js' alt='Icone JavaScript'/>
+                        <CardTecnologia linguagem='React' arquivo='react' color='front-React' colorStroke='stroke-linguagens-react' alt='Icone React'/>
+                        <CardTecnologia linguagem='TailWindCSS' arquivo='tailwindcss' color='front-TailWindCSS' colorStroke='stroke-linguagens-tailwindcss' alt='Icone TailWindCSS'/>
+                        <CardTecnologia linguagem='PHP' arquivo='php' color='front-PHP' colorStroke='stroke-linguagens-php' alt='Icone PHP'/>
+                        <CardTecnologia linguagem='Laravel' arquivo='laravel' color='front-Laravel' colorStroke='stroke-linguagens-laravel' alt='Icone Laravel'/>
+                        <CardTecnologia linguagem='PostgreSQL' arquivo='postgreSql' color='front-PostgreSQL' colorStroke='stroke-linguagens-postgreSQl' alt='Icone PostgreSQL'/>  
                     </div>
                 </section>
                 <Divider type='SECONDARY'/>
-                {/* <section className='flex mt-8 items-center justify-center mb-8 flex-col pl-8 pr-8 xs:pl-0 xs:pr-0'>
+                <section className='flex mt-8 items-center justify-center mb-8 flex-col pl-8 pr-8 xs:pl-0 xs:pr-0'>
                     <h2 className='text-2xl text-white font-semibold mb-8'>Ferramentas</h2>
                     <div className='flex flex-wrap items-center justify-center'>
-                        <CardTecnologia linguagem='Photoshop' arquivo='photoshop' colorShadow='shadow-ferramentas-photoshop' colorStroke='stroke-ferramentas-photoshop' alt='Icone Photoshop'/>
-                        <CardTecnologia linguagem='Visual Studio Code'  arquivo='vsCode'  colorShadow='shadow-ferramentas-vsCode' colorStroke='stroke-ferramentas-vsCode' alt='Icone Vs Code'/>
-                        <CardTecnologia linguagem='Github' arquivo='github' colorShadow='shadow-ferramentas-github' colorStroke='stroke-ferramentas-github' alt='Icone Github'/>
-                        <CardTecnologia linguagem='Git' arquivo='git' colorShadow='shadow-ferramentas-git' colorStroke='stroke-ferramentas-git' alt='Icone Git'/>
+                        <CardTecnologia linguagem='Photoshop' arquivo='photoshop' color='front-Photoshop' colorStroke='stroke-ferramentas-photoshop' alt='Icone Photoshop'/>
+                        <CardTecnologia linguagem='Visual Studio Code'  arquivo='vsCode'  color='front-VSCode' colorStroke='stroke-ferramentas-vsCode' alt='Icone Vs Code'/>
+                        <CardTecnologia linguagem='Github' arquivo='github' color='front-Github' colorStroke='stroke-ferramentas-github' alt='Icone Github'/>
+                        <CardTecnologia linguagem='Git' arquivo='git' color='front-Git' colorStroke='stroke-ferramentas-git' alt='Icone Git'/>
                     </div>
                 </section>
-                <Divider type='PRIMARY'/> */}
+                <Divider type='PRIMARY'/>
                 <section className='mt-8 w-full flex items-center flex-col justify-center pl-8 pr-8'>
                     <h2 className='text-2xl text-white font-semibold mb-8'>Me Mande Uma Mensagem 😉</h2>
                     <FormContato/>
