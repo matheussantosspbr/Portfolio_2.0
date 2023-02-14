@@ -1,7 +1,5 @@
-import CardProjects from "../components/CardProjects"
-
 export default function NotFound() {
-    document.title = 'Portfólio'
+    document.title = 'Page Not Found'
     return (
         <>
             <main className="flex items-center justify-center h-[60vh]">

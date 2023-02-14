@@ -1,5 +1,5 @@
-import CardProjects from "../components/CardProjects"
-import CardProjectsLayout2 from "../components/CardProjectsLayout2"
+import CardProjects from "./src/components/CardProjects"
+import CardProjectsLayout2 from "./src/components/CardProjectsLayout2"
 
 export default function Portfolio() {
     document.title = 'Portfólio'

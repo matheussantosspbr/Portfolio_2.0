@@ -1,4 +1,4 @@
-import Certificados from "../components/Certificado"
+import Certificados from "./src/components/Certificado"
 
 export default function Certificado() {
     document.title = 'Certificados'

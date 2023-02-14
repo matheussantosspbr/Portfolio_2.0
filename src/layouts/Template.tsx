@@ -12,9 +12,6 @@ import Portfolio from '../views/Portfolio';
 import Certificado from '../views/Certificados';
 import NotFound from '../views/NotFound';
 
-// Projetos
-import ConversorDeMoeda from '../views/projects/ConversaoDeMoeda';
-
 export default function Template() {
     return (
         <>
@@ -25,7 +22,6 @@ export default function Template() {
                     <Route path='/' element={<Inicio/>}/>
                     <Route path='/sobre' element={<Sobre/>}/>
                     <Route path='/portfolio' element={<Portfolio/>}/>
-                    <Route path='/portfolio/conversor_de_moeda' element={<ConversorDeMoeda/>}/>
                     <Route path='/certificados' element={<Certificado/>}/>
                     <Route path='*' element={<NotFound />} />
                 </Routes>
